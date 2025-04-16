@@ -11,4 +11,9 @@ export class CatsController {
     findAll(): string {
         return 'this action returns all cats';
     }
+
+    @Get('a/')
+    findOne(): string {
+        return ('this route is different');
+    }
 }
