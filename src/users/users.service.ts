@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaServiec } from '../prisma.service';
+import { PrismaService } from '../prisma.service';
 import { User, Prisma } from '@prisma/client';
 
 @Injectable()
@@ -49,7 +49,7 @@ export class UsersService {
 
     async deleteUser(
         where: Prisma.UserWhereUniqueInput
-    ): Primise<User> {
+    ): Promise<User> {
         return this.prisma.user.delete({
             where,
         });
